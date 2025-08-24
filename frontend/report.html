@@ -1,0 +1,121 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload de Áudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+      class="bg-blue-600 text-white shadow flex items-center justify-between px-8 py-4"
+    >
+      <div class="flex items-center space-x-8">
+        <span class="text-2xl font-bold">Saúde.AI</span>
+        <nav class="flex space-x-6">
+          <a href="#" class="hover:underline">Consultas</a>
+          <a href="#" class="hover:underline">Pacientes</a>
+          <a href="#" class="hover:underline">Relatórios</a>
+          <a href="#" class="hover:underline">Configurações</a>
+        </nav>
+      </div>
+      <!-- Perfil do Médico -->
+      <div class="flex items-center space-x-3">
+        <img
+          src="https://randomuser.me/api/portraits/men/32.jpg"
+          alt="Perfil"
+          class="w-10 h-10 rounded-full border-2 border-white"
+        />
+        <div>
+          <div class="font-semibold">Dr. João Silva</div>
+          <div class="text-xs text-blue-200">Cardiologista</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-1 w-full justify-center items-start mt-8 space-x-8">
+      <!-- Slider lateral simulando abas -->
+      <aside
+        class="w-40 bg-white rounded-xl shadow-lg p-4 flex flex-col space-y-4"
+      >
+         <a
+          href="index.html"
+          class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-100"
+        >
+          <span>Consultas</span>
+          <span
+            class="ml-auto bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full"
+            >3</span
+          >
+        </a>
+        </button>
+        <button
+          class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-100"
+        >
+          <span>Pacientes</span>
+        </button>
+        <button
+          class="flex items-center space-x-2 px-3 py-2 rounded bg-blue-100 text-blue-700 font-semibold"
+        >
+          <span>Relatórios</span>
+        </button>
+        <button
+          class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-100"
+        >
+          <span>Configurações</span>
+        </button>
+      </aside>
+      <!-- Conteúdo principal -->
+      <section class="flex-1 flex flex-col pr-8">
+        <div class="p-6 w-full bg-white shadow-lg rounded-xl">
+          <div class="flex items-center mb-4">
+            <h1 class="text-2xl font-bold mr-2">Consultas Processadas</h1>
+            <button
+              id="btnRefresh"
+              class="p-2 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600"
+              title="Atualizar Consultas"
+            >
+              <!-- Ícone de atualizar (SVG) -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v6h6M20 20v-6h-6M5 19a9 9 0 1 1 2.83-13.17M19 5a9 9 0 1 0-2.83 13.17"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="listaEmpty" class="text-gray-500 italic mb-4 hidden">
+            Nenhuma consulta encontrada
+          </div>
+          <!-- Consultas processadas organizadas por data -->
+          <div id="lista" class="space-y-2">
+            <!-- Exemplo de consulta expansiva -->
+            <!--
+        <details class="border rounded p-3 bg-gray-50">
+          <summary class="cursor-pointer font-semibold flex justify-between items-center">
+            <span>Consulta - 12/06/2024</span>
+            <span class="text-xs text-gray-400">Paciente: Maria</span>
+          </summary>
+          <div class="mt-2 text-sm">
+            <p><strong>Resumo:</strong> Consulta de rotina, exames realizados...</p>
+            <p><strong>Detalhes:</strong> ...</p>
+          </div>
+        </details>
+        -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
