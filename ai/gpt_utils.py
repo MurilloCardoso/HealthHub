@@ -1,9 +1,9 @@
-# ai/gpt_util.py
+
 import os
 import json
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")  # Configure sua API key no ambiente
+openai.api_key = os.getenv("OPENAI_API_KEY")  
 
 def gerar_json_clinico_real(texto_transcrito: str) -> dict:
 
